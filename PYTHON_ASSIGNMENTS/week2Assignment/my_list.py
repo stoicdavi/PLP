@@ -7,3 +7,5 @@ while len(my_list) < 4:
 print(my_list)
 my_list.insert(2,15)
 print("The new list after inserting 15: {}".format(my_list))
+del my_list[-1]
+print(f"The new list after removing the last element {my_list}")
