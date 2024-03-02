@@ -18,3 +18,6 @@ print(f"The new list after removing the last element {my_list}")
 #sorting the list in ascending order
 my_list.sort()
 print(f"Sorted list {my_list}")
+
+#getting index of 30
+print("The index of 30 is :{}".format(my_list.index(30)))
