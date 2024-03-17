@@ -18,4 +18,9 @@ class Dog{
 void main(){
   var myDod = Dog('Labrador', 'Black', 'USA');
   print('Breed : ${myDod.breed}');
+  myDod.run();
+  myDod.bark();
+  var myDod2 = Dog('Pug', 'Brown', 'China');
+  print('Breed : ${myDod2.breed}');
+  myDod2.run();
 }
