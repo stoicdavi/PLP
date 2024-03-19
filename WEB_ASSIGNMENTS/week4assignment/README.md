@@ -4,5 +4,10 @@
 
 ## technology used
 - CSS and HTML
-(image.png)
+
+
+-  this is the output on full screen
 ![alt text](image-1.png)
+
+- This is the ouput when you resize the screen
+![alt text](image-2.png)
