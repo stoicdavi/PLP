@@ -4,3 +4,5 @@
 
 ## technology used
 - CSS and HTML
+(image.png)
+![alt text](image-1.png)
