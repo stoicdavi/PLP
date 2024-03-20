@@ -20,3 +20,7 @@ with open_file('my_file.txt', 'w') as file:
     
 with open_file('my_file.txt', 'r') as file:
     print(file.read())
+
+with open_file("my_file.txt", "a") as file:
+    file.write("\nI am an upcomming software developer and I am very ready to learn\n")
+    file.write("I am an open minded person, ready for any challenge\nI am a very hardworking person and open for collaboration\n")
