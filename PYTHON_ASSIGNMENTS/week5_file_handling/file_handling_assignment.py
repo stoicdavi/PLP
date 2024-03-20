@@ -13,9 +13,10 @@ with open_file('my_file.txt', 'x') as file:
     pass
 
 with open_file('my_file.txt', 'w') as file:
-     name = "David"
-     age = 22
-     single = True
-     file.write(f"\nHello, World!\nThis is your boy {name} age {age}\nVery Ready to learn and is single? {single}\n")
+    name = "David"
+    age = 22
+    single = True
+    file.write(f"\nHello, World!\nThis is your boy {name} age {age}\nVery Ready to learn and is single? {single}\n")
     
-
+with open_file('my_file.txt', 'r') as file:
+    print(file.read())
