@@ -12,5 +12,10 @@ def open_file(file_name, mode):
 with open_file('my_file.txt', 'x') as file:
     pass
 
+with open_file('my_file.txt', 'w') as file:
+     name = "David"
+     age = 22
+     single = True
+     file.write(f"\nHello, World!\nThis is your boy {name} age {age}\nVery Ready to learn and is single? {single}\n")
     
 
