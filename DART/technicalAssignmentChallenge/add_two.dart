@@ -34,7 +34,15 @@ class utils{
       number--;
     }
   }
-  
+  //odd or even
+  void odd_or_even(int num){
+    if (num % 2 == 0){
+      print("$num is an even number");
+    }
+    else{
+      print("$num is an odd number");
+    }
+  }
 }
 
 
@@ -49,10 +57,15 @@ void main(){
   //print numbers from 1 to 10
   obj.print_numbers();
   //check for the string entered
-  print("Enter a string: ");
+  print("Enter a string: 'hello', 'world' or 'Kenya':");
   String str = stdin.readLineSync()!;
   obj.check_string(str);
 
   //print numbers in reverse
   obj.print_numbers_reverse();
+
+  //check if a number is odd or even
+  print("Enter a number: ");
+  int number = int.parse(stdin.readLineSync()!);
+  obj.odd_or_even(number);
 }
