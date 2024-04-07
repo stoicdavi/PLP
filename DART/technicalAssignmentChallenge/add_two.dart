@@ -53,6 +53,16 @@ class utils{
     }
     print("The largest number is: $largest_number");
   }
+  //use of try and catch
+  void try_catch(int num1, int num2){
+
+    try{
+      print(num1 ~/ num2);
+    }
+    catch(e){
+      print("Error: $e");
+    }
+  }
 }
 
 
@@ -82,5 +92,12 @@ void main(){
   //list of numbers entr
   List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   obj.list_of_numbers(numbers);
-  
+
+  //use of try and catch
+  print("Enter the first number: ");
+  int number1 = int.parse(stdin.readLineSync()!);
+  print("Enter the second number: ");
+  int number2 = int.parse(stdin.readLineSync()!);
+  obj.try_catch(number1, number2);
+
 }
