@@ -25,6 +25,16 @@ class utils{
       print("Invalid string!");
     }
   }
+
+  //print numbers in reverse
+  void print_numbers_reverse(){
+    int number = 20;
+    while (number >= 10){
+      print(number);
+      number--;
+    }
+  }
+  
 }
 
 
@@ -42,4 +52,7 @@ void main(){
   print("Enter a string: ");
   String str = stdin.readLineSync()!;
   obj.check_string(str);
+
+  //print numbers in reverse
+  obj.print_numbers_reverse();
 }
