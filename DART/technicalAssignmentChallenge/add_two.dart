@@ -9,7 +9,22 @@ class utils{
       print(i);
     }
   }
-  //function to che
+  //function to check for the string entered and output the string
+  void check_string(String str){
+    
+    if (str == "hello"){
+      print("Hello World! This is Dart Programming Language! with David!");
+    }
+    else if (str == "world"){
+      print("World is a beautiful place!");
+    }
+    else if (str == 'Kenya'){
+      print('Kenya is a beautiful country!');
+    }
+    else{
+      print("Invalid string!");
+    }
+  }
 }
 
 
@@ -23,4 +38,8 @@ void main(){
 
   //print numbers from 1 to 10
   obj.print_numbers();
+  //check for the string entered
+  print("Enter a string: ");
+  String str = stdin.readLineSync()!;
+  obj.check_string(str);
 }
