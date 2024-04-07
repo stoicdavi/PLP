@@ -43,6 +43,16 @@ class utils{
       print("$num is an odd number");
     }
   }
+  //list of numbers
+  void list_of_numbers(List<int> numbers){
+    int largest_number = numbers[0];
+    for (int i = 1; i < numbers.length; i++){
+      if (numbers[i] > largest_number){
+        largest_number = numbers[i];
+      }
+    }
+    print("The largest number is: $largest_number");
+  }
 }
 
 
@@ -68,4 +78,9 @@ void main(){
   print("Enter a number: ");
   int number = int.parse(stdin.readLineSync()!);
   obj.odd_or_even(number);
+
+  //list of numbers entr
+  List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  obj.list_of_numbers(numbers);
+  
 }
