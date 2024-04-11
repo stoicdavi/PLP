@@ -50,6 +50,26 @@ void play(List gameDashBoard, String player){
     print("Invalid position please select a position between 1 - 9");
     play(gameDashBoard, player);
   }
-
 }
 
+void checkWinner(List gameDashBoard, String player){
+  //check the rows
+  for(int i = 0; i < gameDashBoard.length; i++){
+    if(gameDashBoard[i][0] == player && gameDashBoard[i][1] == player && gameDashBoard[i][2] == player){
+      displayWinner(player);
+    }
+  }
+  //check the columns
+  for(int i = 0; i < gameDashBoard.length; i++){
+    if(gameDashBoard[0][i] == player && gameDashBoard[1][i] == player && gameDashBoard[2][i] == player){
+      displayWinner(player);
+    }
+  }
+  //check the diagonals
+  if(gameDashBoard[0][0] == player && gameDashBoard[1][1] == player && gameDashBoard[2][2] == player){
+    displayWinner(player);
+  }
+  if(gameDashBoard[0][2] == player && gameDashBoard[1][1] == player && gameDashBoard[2][0] == player){
+    displayWinner(player);
+  }
+}
