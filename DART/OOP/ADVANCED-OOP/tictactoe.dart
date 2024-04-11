@@ -14,12 +14,17 @@ void main(){
 }
 
 void DisplayBoard(List gameDashBoard){//printing the current state of the board
-  for(int i = 0; i < gameDashBoard.length; i++){
-    print("${gameDashBoard[0][0]}  | ${gameDashBoard[0][1]} | ${gameDashBoard[0][2]}");
-    print("-----------");
-    print("${gameDashBoard[1][0]}  | ${gameDashBoard[1][1]} | ${gameDashBoard[1][2]}");
-    print("-----------");
-    print("${gameDashBoard[2][0]}  | ${gameDashBoard[2][1]} | ${gameDashBoard[2][2]}");
-  }
+ 
+  print("${gameDashBoard[0][0]}  | ${gameDashBoard[0][1]} | ${gameDashBoard[0][2]}");
+  print("-----------");
+  print("${gameDashBoard[1][0]}  | ${gameDashBoard[1][1]} | ${gameDashBoard[1][2]}");
+  print("-----------");
+  print("${gameDashBoard[2][0]}  | ${gameDashBoard[2][1]} | ${gameDashBoard[2][2]}");
+
+  // for(int i = 0; i < gameDashBoard.length; i++){
+  //     print(gameDashBoard[i];
+  //   
+  // }
 }
 
+// void play(List gameDashBoard)
