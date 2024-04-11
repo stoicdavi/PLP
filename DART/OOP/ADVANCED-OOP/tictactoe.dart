@@ -73,3 +73,7 @@ void checkWinner(List gameDashBoard, String player){
     displayWinner(player);
   }
 }
+
+void displayWinner(String player){
+  print("Player $player is the winner");
+}
