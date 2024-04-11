@@ -45,11 +45,13 @@ double calculate(double num1, double num2, String operator) {
       result = num1 * num2;
       break;
     case '/':
-      if (num2 == 0) {
+      if (num2 == 0 && operator == '/') {
         print("Cannot divide by zero!");
-        return 0;
+        break;
       }
-      result = num1 / num2;
+      else{
+        result = num1 / num2;
+      }
       break;
     case '%':
       result = num1 % num2;
