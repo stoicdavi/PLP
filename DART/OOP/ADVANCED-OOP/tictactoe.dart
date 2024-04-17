@@ -59,7 +59,6 @@ void play(List gameDashBoard, String player){
     play(gameDashBoard, player);
   }
 }
-
 void checkWinner(List gameDashBoard, String player) {
   // Check the rows
   for (int i = 0; i < gameDashBoard.length; i++) {
@@ -79,22 +78,25 @@ void checkWinner(List gameDashBoard, String player) {
       displayWinner(player);
       return;
     }
-    else if (gameDashBoard[0][0] == player &&
+  }
+
+  // Check the diagonals
+  if (gameDashBoard[0][0] == player &&
       gameDashBoard[1][1] == player &&
       gameDashBoard[2][2] == player) {
-      displayWinner(player);
-      return;
-   } else if (gameDashBoard[0][2] == player &&
+    displayWinner(player);
+    return;
+  } else if (gameDashBoard[0][2] == player &&
       gameDashBoard[1][1] == player &&
       gameDashBoard[2][0] == player) {
-        displayWinner(player);
-        return;
+    displayWinner(player);
+    return;
   }
-  else if (isBoardFull(gameDashBoard)) {
+
+  // Check for a tie
+  if (isBoardFull(gameDashBoard)) {
     print("It's a tie!");
     return;
-  
-  }
   }
 }
 
