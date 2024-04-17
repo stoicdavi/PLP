@@ -40,13 +40,13 @@ void play(List gameDashBoard, String player){
   //get the position from the player
   int position = int.parse(stdin.readLineSync()!);
   //check if the position is valid
-  if (position != null && position >= 1 && position <= 9){
+  if (position != false && position >= 1 && position <= 9){
     var row = (position / 3).ceil() - 1;//calculate the row
     var col = (position - 1) % 3;//calculate the column
 
     if(gameDashBoard[row][col] == ' '){
       gameDashBoard[row][col] = player;
-      //TODO- Create a fucntion to check the winner
+     
       checkWinner(gameDashBoard, player);
     }
     else{
@@ -59,6 +59,7 @@ void play(List gameDashBoard, String player){
     play(gameDashBoard, player);
   }
 }
+
 void checkWinner(List gameDashBoard, String player) {
   // Check the rows
   for (int i = 0; i < gameDashBoard.length; i++) {
@@ -78,25 +79,22 @@ void checkWinner(List gameDashBoard, String player) {
       displayWinner(player);
       return;
     }
-  }
-
-  // Check the diagonals
-  if (gameDashBoard[0][0] == player &&
+    else if (gameDashBoard[0][0] == player &&
       gameDashBoard[1][1] == player &&
       gameDashBoard[2][2] == player) {
-    displayWinner(player);
-    return;
-  } else if (gameDashBoard[0][2] == player &&
+      displayWinner(player);
+      return;
+   } else if (gameDashBoard[0][2] == player &&
       gameDashBoard[1][1] == player &&
       gameDashBoard[2][0] == player) {
-    displayWinner(player);
-    return;
+        displayWinner(player);
+        return;
   }
-
-  // Check for a tie
-  if (isBoardFull(gameDashBoard)) {
+  else if (isBoardFull(gameDashBoard)) {
     print("It's a tie!");
     return;
+  
+  }
   }
 }
 
